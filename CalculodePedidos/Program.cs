@@ -7,6 +7,8 @@ namespace CalculodePedidos
     {        
         protected static void Main(string[] args)
         {
+            AppDomain.CurrentDomain.UnhandledException += GlobalExceptionHandler;
+
             Console.WriteLine("Introduzca la cantidad de unidades");
             var units = Console.ReadLine();
             Console.WriteLine("Introduzca el precio por unidad");
@@ -44,6 +46,14 @@ namespace CalculodePedidos
 
             Console.WriteLine("Precio total");
             Console.WriteLine(totalBase - totalDiscount + totalImpuesto);
+        }
+
+        private static void GlobalExceptionHandler(object sender, UnhandledExceptionEventArgs e)
+        {
+            Console.WriteLine(CalculodePedidos_Resources.ErrorInesperado);
+            Console.ReadLine();
+            Environment.Exit(1);
+
         }
     }
 }
