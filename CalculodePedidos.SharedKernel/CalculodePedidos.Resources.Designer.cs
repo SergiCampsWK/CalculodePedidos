@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CalculodePedidos {
+namespace CalculodePedidos.SharedKernel {
     using System;
     
     
@@ -22,7 +22,7 @@ namespace CalculodePedidos {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class CalculodePedidos_Resources {
+    public class CalculodePedidos_Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,10 +36,10 @@ namespace CalculodePedidos {
         ///   Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("CalculodePedidos.CalculodePedidos.Resources", typeof(CalculodePedidos_Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("CalculodePedidos.SharedKernel.CalculodePedidos.Resources", typeof(CalculodePedidos_Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -51,7 +51,7 @@ namespace CalculodePedidos {
         ///   búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace CalculodePedidos {
         /// <summary>
         ///   Busca una cadena traducida similar a El importe base del pedido no puede ser igual o inferior a cero..
         /// </summary>
-        internal static string BaseNoPuedeSerCero {
+        public static string BaseNoPuedeSerCero {
             get {
                 return ResourceManager.GetString("BaseNoPuedeSerCero", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace CalculodePedidos {
         /// <summary>
         ///   Busca una cadena traducida similar a Es obligatorio informar el código de pais..
         /// </summary>
-        internal static string CodigoPaisNoInformado {
+        public static string CodigoPaisNoInformado {
             get {
                 return ResourceManager.GetString("CodigoPaisNoInformado", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace CalculodePedidos {
         /// <summary>
         ///   Busca una cadena traducida similar a El descuento aplicado es :.
         /// </summary>
-        internal static string ElDescuentoAplicadoEs {
+        public static string ElDescuentoAplicadoEs {
             get {
                 return ResourceManager.GetString("ElDescuentoAplicadoEs", resourceCulture);
             }
@@ -90,7 +90,7 @@ namespace CalculodePedidos {
         /// <summary>
         ///   Busca una cadena traducida similar a El impuesto aplicado es :.
         /// </summary>
-        internal static string ElImpuestoAplicadoEs {
+        public static string ElImpuestoAplicadoEs {
             get {
                 return ResourceManager.GetString("ElImpuestoAplicadoEs", resourceCulture);
             }
@@ -99,7 +99,7 @@ namespace CalculodePedidos {
         /// <summary>
         ///   Busca una cadena traducida similar a Ha ocurrido un error inesperado. Pulse cualquier tecla para salir..
         /// </summary>
-        internal static string ErrorInesperado {
+        public static string ErrorInesperado {
             get {
                 return ResourceManager.GetString("ErrorInesperado", resourceCulture);
             }
@@ -108,7 +108,7 @@ namespace CalculodePedidos {
         /// <summary>
         ///   Busca una cadena traducida similar a Introduzca el código de pais de la operación (se aplicacará el impuesto correspondiente) :.
         /// </summary>
-        internal static string IntroduzcaPais {
+        public static string IntroduzcaPais {
             get {
                 return ResourceManager.GetString("IntroduzcaPais", resourceCulture);
             }
@@ -117,7 +117,7 @@ namespace CalculodePedidos {
         /// <summary>
         ///   Busca una cadena traducida similar a Introduzca el porcentage de descuento a aplicar en base 100 :.
         /// </summary>
-        internal static string IntroduzcaPorcentajeDto {
+        public static string IntroduzcaPorcentajeDto {
             get {
                 return ResourceManager.GetString("IntroduzcaPorcentajeDto", resourceCulture);
             }
@@ -126,7 +126,7 @@ namespace CalculodePedidos {
         /// <summary>
         ///   Busca una cadena traducida similar a Introduzca el precio por unidad :.
         /// </summary>
-        internal static string IntroduzcaPrecioUnidad {
+        public static string IntroduzcaPrecioUnidad {
             get {
                 return ResourceManager.GetString("IntroduzcaPrecioUnidad", resourceCulture);
             }
@@ -135,7 +135,7 @@ namespace CalculodePedidos {
         /// <summary>
         ///   Busca una cadena traducida similar a Introduzca la cantidad de unidades :.
         /// </summary>
-        internal static string IntroduzcaUnidades {
+        public static string IntroduzcaUnidades {
             get {
                 return ResourceManager.GetString("IntroduzcaUnidades", resourceCulture);
             }
@@ -144,7 +144,7 @@ namespace CalculodePedidos {
         /// <summary>
         ///   Busca una cadena traducida similar a Listado de paises disponibles para la operación :.
         /// </summary>
-        internal static string ListadoPaises {
+        public static string ListadoPaises {
             get {
                 return ResourceManager.GetString("ListadoPaises", resourceCulture);
             }
@@ -153,7 +153,7 @@ namespace CalculodePedidos {
         /// <summary>
         ///   Busca una cadena traducida similar a Precio total :.
         /// </summary>
-        internal static string PrecioTotal {
+        public static string PrecioTotal {
             get {
                 return ResourceManager.GetString("PrecioTotal", resourceCulture);
             }
@@ -162,7 +162,7 @@ namespace CalculodePedidos {
         /// <summary>
         ///   Busca una cadena traducida similar a Es obligatorio informar el precio por unidad..
         /// </summary>
-        internal static string PrecioUnidadNoInformado {
+        public static string PrecioUnidadNoInformado {
             get {
                 return ResourceManager.GetString("PrecioUnidadNoInformado", resourceCulture);
             }
@@ -171,7 +171,7 @@ namespace CalculodePedidos {
         /// <summary>
         ///   Busca una cadena traducida similar a El precio por unidad no puede ser cero..
         /// </summary>
-        internal static string PrecioUnidadNoPuedeSerCero {
+        public static string PrecioUnidadNoPuedeSerCero {
             get {
                 return ResourceManager.GetString("PrecioUnidadNoPuedeSerCero", resourceCulture);
             }
@@ -180,7 +180,7 @@ namespace CalculodePedidos {
         /// <summary>
         ///   Busca una cadena traducida similar a Es obligatorio informar el número de unidades del pedido..
         /// </summary>
-        internal static string UnidadesNoInformadas {
+        public static string UnidadesNoInformadas {
             get {
                 return ResourceManager.GetString("UnidadesNoInformadas", resourceCulture);
             }
@@ -189,7 +189,7 @@ namespace CalculodePedidos {
         /// <summary>
         ///   Busca una cadena traducida similar a El número de unidades no puede ser cero..
         /// </summary>
-        internal static string UnidadesNoPuedenSerCero {
+        public static string UnidadesNoPuedenSerCero {
             get {
                 return ResourceManager.GetString("UnidadesNoPuedenSerCero", resourceCulture);
             }

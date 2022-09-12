@@ -5,19 +5,19 @@ VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculodePedidos", "CalculodePedidos\CalculodePedidos.csproj", "{B3D969F4-AA15-4C24-956C-2B8735A234CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculodePedidos.UnitTest", "CalculodePedidos.Test\CalculodePedidos.UnitTest.csproj", "{7BFF54AD-0232-4B0B-9436-A288EFED486C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculodePedidos.UnitTest", "CalculodePedidos.Test\CalculodePedidos.UnitTest.csproj", "{7BFF54AD-0232-4B0B-9436-A288EFED486C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{AD6BCA2F-8D5C-4502-AD17-E7E4F9EA9053}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculodePedidos.IntegrationTest", "CalculodePedidos.IntegrationTest\CalculodePedidos.IntegrationTest.csproj", "{91A8B321-A256-4D9F-8F78-DDADA3B87812}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculodePedidos.IntegrationTest", "CalculodePedidos.IntegrationTest\CalculodePedidos.IntegrationTest.csproj", "{91A8B321-A256-4D9F-8F78-DDADA3B87812}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculodePedidos.Domain", "CalculodePedidos.Domain\CalculodePedidos.Domain.csproj", "{A9834623-67CB-4956-903E-429A52DD74F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculodePedidos.Domain", "CalculodePedidos.Domain\CalculodePedidos.Domain.csproj", "{A9834623-67CB-4956-903E-429A52DD74F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculodePedidos.Infrastructure", "CalculodePedidos.Infrastructure\CalculodePedidos.Infrastructure.csproj", "{DE603DA7-B5B2-4183-9F7B-3DB743F614CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculodePedidos.Infrastructure", "CalculodePedidos.Infrastructure\CalculodePedidos.Infrastructure.csproj", "{DE603DA7-B5B2-4183-9F7B-3DB743F614CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculodePedidos.SharedKernel", "CalculodePedidos.SharedKernel\CalculodePedidos.SharedKernel.csproj", "{73C189A3-8FD0-4882-B133-1C9E859F8096}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculodePedidos.SharedKernel", "CalculodePedidos.SharedKernel\CalculodePedidos.SharedKernel.csproj", "{73C189A3-8FD0-4882-B133-1C9E859F8096}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculodePedidos.App", "CalculodePedidos.App\CalculodePedidos.App.csproj", "{E7EF6A9D-4EA2-4573-BB2C-4F968F61558E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculodePedidos.App", "CalculodePedidos.App\CalculodePedidos.App.csproj", "{E7EF6A9D-4EA2-4573-BB2C-4F968F61558E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

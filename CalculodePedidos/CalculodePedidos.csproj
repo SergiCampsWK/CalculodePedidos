@@ -7,28 +7,15 @@
 
   <ItemGroup>
     <PackageReference Include="FluentValidation" Version="11.2.2" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
     <PackageReference Include="Serilog" Version="2.11.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CalculodePedidos.App\CalculodePedidos.App.csproj" />
     <ProjectReference Include="..\CalculodePedidos.Domain\CalculodePedidos.Domain.csproj" />
     <ProjectReference Include="..\CalculodePedidos.Infrastructure\CalculodePedidos.Infrastructure.csproj" />
     <ProjectReference Include="..\CalculodePedidos.SharedKernel\CalculodePedidos.SharedKernel.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Update="CalculodePedidos.Resources.Designer.cs">
-      <DependentUpon>CalculodePedidos.Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Update="CalculodePedidos.Resources.resx">
-      <LastGenOutput>CalculodePedidos.Resources.Designer.cs</LastGenOutput>
-      <Generator>ResXFileCodeGenerator</Generator>
-    </EmbeddedResource>
   </ItemGroup>
 
 </Project>

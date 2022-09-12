@@ -8,4 +8,19 @@
     <PackageReference Include="FluentValidation.AspNetCore" Version="11.2.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="CalculodePedidos.Resources.Designer.cs">
+      <DependentUpon>CalculodePedidos.Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="CalculodePedidos.Resources.resx">
+      <LastGenOutput>CalculodePedidos.Resources.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
 </Project>

@@ -13,4 +13,12 @@
     <PackageReference Include="coverlet.collector" Version="1.2.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CalculodePedidos.App\CalculodePedidos.App.csproj" />
+    <ProjectReference Include="..\CalculodePedidos.Domain\CalculodePedidos.Domain.csproj" />
+    <ProjectReference Include="..\CalculodePedidos.Infrastructure\CalculodePedidos.Infrastructure.csproj" />
+    <ProjectReference Include="..\CalculodePedidos.SharedKernel\CalculodePedidos.SharedKernel.csproj" />
+    <ProjectReference Include="..\CalculodePedidos\CalculodePedidos.csproj" />
+  </ItemGroup>
+
 </Project>

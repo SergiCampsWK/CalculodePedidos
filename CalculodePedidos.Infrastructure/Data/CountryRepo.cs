@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace CalculodePedidos.Infrastructure
 {
-    public class CountryRepo
+    public class CountryRepo : ICountryRepo
     {
         public CountryRepo() { }
 
@@ -19,16 +19,14 @@ namespace CalculodePedidos.Infrastructure
                     new Country("CA", 8.25)
                 };
 
-
-        public string GetCountriesInfo()
-        {
-            return countries.Select(c => $"Pais : {c.Id} Impuesto : {c.Tax}")
-                            .Aggregate((a, b) => a + Environment.NewLine + b);
-        }
-
-        public Country GetCountry(string countryId)
+        public Country Get(string countryId)
         {
             return countries.Find(c => String.Equals(c.Id, countryId, StringComparison.OrdinalIgnoreCase));
+        }
+
+        public IEnumerable<Country> GetAll()
+        {
+            return countries;
         }
     }
 }
