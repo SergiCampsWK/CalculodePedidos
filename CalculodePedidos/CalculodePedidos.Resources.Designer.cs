@@ -61,6 +61,24 @@ namespace CalculodePedidos {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a El importe base del pedido no puede ser igual o inferior a cero..
+        /// </summary>
+        internal static string BaseNoPuedeSerCero {
+            get {
+                return ResourceManager.GetString("BaseNoPuedeSerCero", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Es obligatorio informar el código de pais..
+        /// </summary>
+        internal static string CodigoPaisNoInformado {
+            get {
+                return ResourceManager.GetString("CodigoPaisNoInformado", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a El descuento aplicado es :.
         /// </summary>
         internal static string ElDescuentoAplicadoEs {
@@ -138,6 +156,42 @@ namespace CalculodePedidos {
         internal static string PrecioTotal {
             get {
                 return ResourceManager.GetString("PrecioTotal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Es obligatorio informar el precio por unidad..
+        /// </summary>
+        internal static string PrecioUnidadNoInformado {
+            get {
+                return ResourceManager.GetString("PrecioUnidadNoInformado", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a El precio por unidad no puede ser cero..
+        /// </summary>
+        internal static string PrecioUnidadNoPuedeSerCero {
+            get {
+                return ResourceManager.GetString("PrecioUnidadNoPuedeSerCero", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Es obligatorio informar el número de unidades del pedido..
+        /// </summary>
+        internal static string UnidadesNoInformadas {
+            get {
+                return ResourceManager.GetString("UnidadesNoInformadas", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a El número de unidades no puede ser cero..
+        /// </summary>
+        internal static string UnidadesNoPuedenSerCero {
+            get {
+                return ResourceManager.GetString("UnidadesNoPuedenSerCero", resourceCulture);
             }
         }
     }

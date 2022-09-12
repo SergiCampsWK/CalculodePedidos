@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="BaseNoPuedeSerCero" xml:space="preserve">
+    <value>El importe base del pedido no puede ser igual o inferior a cero.</value>
+  </data>
+  <data name="CodigoPaisNoInformado" xml:space="preserve">
+    <value>Es obligatorio informar el código de pais.</value>
+  </data>
   <data name="ElDescuentoAplicadoEs" xml:space="preserve">
     <value>El descuento aplicado es :</value>
   </data>
@@ -143,5 +149,17 @@
   </data>
   <data name="PrecioTotal" xml:space="preserve">
     <value>Precio total :</value>
+  </data>
+  <data name="PrecioUnidadNoInformado" xml:space="preserve">
+    <value>Es obligatorio informar el precio por unidad.</value>
+  </data>
+  <data name="PrecioUnidadNoPuedeSerCero" xml:space="preserve">
+    <value>El precio por unidad no puede ser cero.</value>
+  </data>
+  <data name="UnidadesNoInformadas" xml:space="preserve">
+    <value>Es obligatorio informar el número de unidades del pedido.</value>
+  </data>
+  <data name="UnidadesNoPuedenSerCero" xml:space="preserve">
+    <value>El número de unidades no puede ser cero.</value>
   </data>
 </root>
