@@ -1,5 +1,6 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
+using L = CalculodePedidos.CalculodePedidos_Resources;
 
 namespace CalculodePedidos
 {
@@ -9,19 +10,21 @@ namespace CalculodePedidos
         {
             AppDomain.CurrentDomain.UnhandledException += GlobalExceptionHandler;
 
-            Console.WriteLine("Introduzca la cantidad de unidades");
+            Console.WriteLine(L.IntroduzcaUnidades);
             var units = Console.ReadLine();
-            Console.WriteLine("Introduzca el precio por unidad");
+
+            Console.WriteLine(L.IntroduzcaPrecioUnidad);
             var unitPrice = Console.ReadLine();
+
             var totalBase = Double.Parse(unitPrice) * Double.Parse(units);
 
 
-            Console.WriteLine("Introduzca el porcentage de descuento a aplicar en base 100");
+            Console.WriteLine(L.IntroduzcaPorcentajeDto);
             var percentatgeDiscount = Console.ReadLine();
             var totalDiscount = Double.Parse(percentatgeDiscount) * totalBase / 100;
-            Console.WriteLine("El descuento aplicado es:");
-            Console.WriteLine(totalDiscount);
 
+            Console.WriteLine(L.ElDescuentoAplicadoEs);
+            Console.WriteLine(totalDiscount);
 
             Dictionary<string, Double > countries = new Dictionary<string, Double>()
                 {
@@ -32,25 +35,24 @@ namespace CalculodePedidos
                     { "CA", 8.25}
             };
 
-            Console.WriteLine("Seleccione un pais a aplicar el impuesto:");
+            Console.WriteLine(L.ListadoPaises);
             foreach (KeyValuePair<string, Double > country in countries) {                
                 Console.WriteLine( "Pais: " + country.Key + " Impuesto:" + country.Value);
             }
 
-            Console.WriteLine("Introduzca el porcentage de impuesto a aplicar en base 100");
+            Console.WriteLine(L.IntroduzcaPais);
             var paisImpuesto = Console.ReadLine();
             var totalImpuesto = countries[paisImpuesto] * totalBase / 100;
-            Console.WriteLine("El impuesto aplicado es:");
-            Console.WriteLine(totalImpuesto);
 
+            Console.WriteLine(L.ElImpuestoAplicadoEs + totalImpuesto);
 
-            Console.WriteLine("Precio total");
+            Console.WriteLine(L.PrecioTotal);
             Console.WriteLine(totalBase - totalDiscount + totalImpuesto);
         }
 
         private static void GlobalExceptionHandler(object sender, UnhandledExceptionEventArgs e)
         {
-            Console.WriteLine(CalculodePedidos_Resources.ErrorInesperado);
+            Console.WriteLine(L.ErrorInesperado);
             Console.ReadLine();
             Environment.Exit(1);
 

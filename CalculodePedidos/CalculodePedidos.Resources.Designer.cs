@@ -61,11 +61,83 @@ namespace CalculodePedidos {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a El descuento aplicado es :.
+        /// </summary>
+        internal static string ElDescuentoAplicadoEs {
+            get {
+                return ResourceManager.GetString("ElDescuentoAplicadoEs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a El impuesto aplicado es :.
+        /// </summary>
+        internal static string ElImpuestoAplicadoEs {
+            get {
+                return ResourceManager.GetString("ElImpuestoAplicadoEs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Ha ocurrido un error inesperado. Pulse cualquier tecla para salir..
         /// </summary>
         internal static string ErrorInesperado {
             get {
                 return ResourceManager.GetString("ErrorInesperado", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Introduzca el código de pais de la operación (se aplicacará el impuesto correspondiente) :.
+        /// </summary>
+        internal static string IntroduzcaPais {
+            get {
+                return ResourceManager.GetString("IntroduzcaPais", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Introduzca el porcentage de descuento a aplicar en base 100 :.
+        /// </summary>
+        internal static string IntroduzcaPorcentajeDto {
+            get {
+                return ResourceManager.GetString("IntroduzcaPorcentajeDto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Introduzca el precio por unidad :.
+        /// </summary>
+        internal static string IntroduzcaPrecioUnidad {
+            get {
+                return ResourceManager.GetString("IntroduzcaPrecioUnidad", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Introduzca la cantidad de unidades :.
+        /// </summary>
+        internal static string IntroduzcaUnidades {
+            get {
+                return ResourceManager.GetString("IntroduzcaUnidades", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Listado de paises disponibles para la operación :.
+        /// </summary>
+        internal static string ListadoPaises {
+            get {
+                return ResourceManager.GetString("ListadoPaises", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Precio total :.
+        /// </summary>
+        internal static string PrecioTotal {
+            get {
+                return ResourceManager.GetString("PrecioTotal", resourceCulture);
             }
         }
     }
