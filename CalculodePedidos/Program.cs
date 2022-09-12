@@ -1,11 +1,13 @@
 ﻿ using System;
 using System.Collections.Generic;
+using CalculodePedidos;
+using CalculodePedidos.Domain;
 using L = CalculodePedidos.CalculodePedidos_Resources;
 
 namespace CalculodePedidos
 {
     internal class Program
-    {        
+    {
         protected static void Main(string[] args)
         {
             AppDomain.CurrentDomain.UnhandledException += GlobalExceptionHandler;
@@ -41,13 +43,13 @@ namespace CalculodePedidos
             }
 
             Console.WriteLine(L.IntroduzcaPais);
-            var paisImpuesto = Console.ReadLine();
-            var totalImpuesto = countries[paisImpuesto] * totalBase / 100;
+            var countryId = Console.ReadLine();
+            var totalTax = countries[countryId] * totalBase / 100;
 
-            Console.WriteLine(L.ElImpuestoAplicadoEs + totalImpuesto);
+            Console.WriteLine(L.ElImpuestoAplicadoEs + totalTax);
 
             Console.WriteLine(L.PrecioTotal);
-            Console.WriteLine(totalBase - totalDiscount + totalImpuesto);
+            Console.WriteLine(totalBase - totalDiscount + totalTax);
         }
 
         private static void GlobalExceptionHandler(object sender, UnhandledExceptionEventArgs e)
