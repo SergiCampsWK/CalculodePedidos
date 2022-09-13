@@ -132,6 +132,9 @@
   <data name="ErrorInesperado" xml:space="preserve">
     <value>Ha ocurrido un error inesperado. Pulse cualquier tecla para salir.</value>
   </data>
+  <data name="Impuesto" xml:space="preserve">
+    <value>Impuesto</value>
+  </data>
   <data name="IntroduzcaPais" xml:space="preserve">
     <value>Introduzca el código de pais de la operación (se aplicacará el impuesto correspondiente) :</value>
   </data>
@@ -146,6 +149,9 @@
   </data>
   <data name="ListadoPaises" xml:space="preserve">
     <value>Listado de paises disponibles para la operación :</value>
+  </data>
+  <data name="Pais" xml:space="preserve">
+    <value>Pais</value>
   </data>
   <data name="PrecioTotal" xml:space="preserve">
     <value>Precio total :</value>

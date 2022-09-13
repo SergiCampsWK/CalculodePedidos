@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using CalculodePedidos.Domain;
-using System.Text;
-using System.Linq;
 
 namespace CalculodePedidos.Infrastructure
 {

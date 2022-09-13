@@ -1,21 +1,16 @@
 ﻿using CalculodePedidos.Domain;
 using System;
 using System.Linq;
-using System.Collections.Generic;
-using System.Text;
 using Serilog;
-using CalculodePedidos.Infrastructure;
 
 namespace CalculodePedidos.App
 {
     public class OrderAppSrv : IOrderAppSrv
     {
         private ILogger log = new LoggerConfiguration().MinimumLevel.Debug().CreateLogger();
-        private readonly CountryRepo countryRepo = new CountryRepo();   
+        private readonly ICountryRepo _countryRepo;
 
-        public OrderAppSrv()
-        {
-        }
+        public OrderAppSrv(ICountryRepo countryRepo) => _countryRepo = countryRepo;
 
         public Order CreateOrder(string units, string unitPrice, string discountPercentage)
         {
@@ -35,17 +30,13 @@ namespace CalculodePedidos.App
 
         }
 
-        public string GetCountriesInfo()
-        {
-            return countryRepo.GetAll().Select(c => $"Pais : {c.Id} Impuesto : {c.Tax}")
-                            .Aggregate((a, b) => a + Environment.NewLine + b);
-        }
+        public string GetCountriesInfo() => _countryRepo.GetAll().Select(c => CountryFormatter.Format(c))
+                                                                 .Aggregate((a, b) => a + Environment.NewLine + b);
 
         public void SetCountry(Order order, string countryId)
         {
-            var country = countryRepo.Get(countryId);
+            var country = _countryRepo.Get(countryId);
             order.SetCountry(country);
         }
-
     }
 }

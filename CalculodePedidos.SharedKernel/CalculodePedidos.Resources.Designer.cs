@@ -106,6 +106,15 @@ namespace CalculodePedidos.SharedKernel {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Impuesto.
+        /// </summary>
+        public static string Impuesto {
+            get {
+                return ResourceManager.GetString("Impuesto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Introduzca el código de pais de la operación (se aplicacará el impuesto correspondiente) :.
         /// </summary>
         public static string IntroduzcaPais {
@@ -147,6 +156,15 @@ namespace CalculodePedidos.SharedKernel {
         public static string ListadoPaises {
             get {
                 return ResourceManager.GetString("ListadoPaises", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Pais.
+        /// </summary>
+        public static string Pais {
+            get {
+                return ResourceManager.GetString("Pais", resourceCulture);
             }
         }
         

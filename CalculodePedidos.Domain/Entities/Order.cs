@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using CalculodePedidos.SharedKernel;
 using L = CalculodePedidos.SharedKernel.CalculodePedidos_Resources;
 
 namespace CalculodePedidos.Domain

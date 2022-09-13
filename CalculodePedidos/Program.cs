@@ -4,6 +4,7 @@ using CalculodePedidos.Domain;
 using CalculodePedidos.Infrastructure;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Serilog;
 using L = CalculodePedidos.SharedKernel.CalculodePedidos_Resources;
 
 using IHost host = Host.CreateDefaultBuilder(args)
@@ -12,23 +13,23 @@ using IHost host = Host.CreateDefaultBuilder(args)
                 .AddScoped<ICountryRepo, CountryRepo>())
     .Build();
 
-RecogarPedido(host.Services);
+CalculodePedidos(host.Services);
 
 
-static void RecogarPedido(IServiceProvider services)
+static void CalculodePedidos(IServiceProvider services)
 {
     AppDomain.CurrentDomain.UnhandledException += GlobalExceptionHandler;
+    var orderService = services.GetRequiredService<IOrderAppSrv>();
 
     Console.WriteLine(L.IntroduzcaUnidades);
-    var units = Console.ReadLine();
+    var units = Console.ReadLine(); 
 
     Console.WriteLine(L.IntroduzcaPrecioUnidad);
     var unitPrice = Console.ReadLine();
 
     Console.WriteLine(L.IntroduzcaPorcentajeDto);
     var discountPercentage = Console.ReadLine();
-
-    var orderService = new OrderAppSrv();
+    
     var order = orderService.CreateOrder(units, unitPrice, discountPercentage);
 
     Console.WriteLine(L.ElDescuentoAplicadoEs + Environment.NewLine + order.TotalDiscount);
