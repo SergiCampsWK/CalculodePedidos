@@ -11,7 +11,7 @@ namespace CalculodePedidos.Test
             var units = 100;
             var unitPrice = 2;
                 
-            //var resultado = CalculodePedidos.CalculateTotalBase(units, unitPrice);
+            
 
         }
 
