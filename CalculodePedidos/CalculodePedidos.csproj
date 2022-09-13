@@ -3,6 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
+    <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,6 +17,10 @@
     <ProjectReference Include="..\CalculodePedidos.Domain\CalculodePedidos.Domain.csproj" />
     <ProjectReference Include="..\CalculodePedidos.Infrastructure\CalculodePedidos.Infrastructure.csproj" />
     <ProjectReference Include="..\CalculodePedidos.SharedKernel\CalculodePedidos.SharedKernel.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
   </ItemGroup>
 
 </Project>

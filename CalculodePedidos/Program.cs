@@ -1,7 +1,16 @@
 ﻿using System;
 using CalculodePedidos.App;
+using CalculodePedidos.Domain;
 using CalculodePedidos.Infrastructure;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using L = CalculodePedidos.SharedKernel.CalculodePedidos_Resources;
+
+using IHost host = Host.CreateDefaultBuilder(args)
+    .ConfigureServices((_, services) =>
+        services.AddScoped<IOrderAppSrv, OrderAppSrv>()
+                .AddScoped<ICountryRepo, CountryRepo>())
+    .Build();
 
 namespace CalculodePedidos
 {
