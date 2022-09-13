@@ -25,7 +25,7 @@ namespace CalculodePedidos.App
             catch (Exception ex)
             {
                 log.Error(ex, "Ha ocurrido un error creando el pedido. Unidades : {0}, Precio : {1}", units, unitPrice);
-                return null;
+                throw;
             }
 
         }
@@ -35,6 +35,9 @@ namespace CalculodePedidos.App
 
         public void SetCountry(Order order, string countryId)
         {
+            if (order is null) throw new ArgumentNullException(nameof(order));
+            if (string.IsNullOrWhiteSpace(countryId)) throw new ArgumentException($"'{nameof(countryId)}' no puede ser nulo ni estar vacío.", nameof(countryId));
+
             var country = _countryRepo.Get(countryId);
             order.SetCountry(country);
         }
