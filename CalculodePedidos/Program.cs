@@ -12,50 +12,47 @@ using IHost host = Host.CreateDefaultBuilder(args)
                 .AddScoped<ICountryRepo, CountryRepo>())
     .Build();
 
-namespace CalculodePedidos
+RecogarPedido(host.Services);
+
+
+static void RecogarPedido(IServiceProvider services)
 {
-    internal class Program
-    {
-        protected static void Main(string[] args)
-        {
-            AppDomain.CurrentDomain.UnhandledException += GlobalExceptionHandler;
+    AppDomain.CurrentDomain.UnhandledException += GlobalExceptionHandler;
 
-            Console.WriteLine(L.IntroduzcaUnidades);
-            var units = Console.ReadLine();
+    Console.WriteLine(L.IntroduzcaUnidades);
+    var units = Console.ReadLine();
 
-            Console.WriteLine(L.IntroduzcaPrecioUnidad);
-            var unitPrice = Console.ReadLine();
+    Console.WriteLine(L.IntroduzcaPrecioUnidad);
+    var unitPrice = Console.ReadLine();
 
-            Console.WriteLine(L.IntroduzcaPorcentajeDto);
-            var discountPercentage = Console.ReadLine();
+    Console.WriteLine(L.IntroduzcaPorcentajeDto);
+    var discountPercentage = Console.ReadLine();
 
-            var orderService = new OrderAppSrv();
-            var order = orderService.CreateOrder(units, unitPrice, discountPercentage);
-            
-            Console.WriteLine(L.ElDescuentoAplicadoEs + Environment.NewLine + order.TotalDiscount);
+    var orderService = new OrderAppSrv();
+    var order = orderService.CreateOrder(units, unitPrice, discountPercentage);
 
-            Console.WriteLine(L.ListadoPaises);
-            Console.WriteLine(orderService.GetCountriesInfo());
+    Console.WriteLine(L.ElDescuentoAplicadoEs + Environment.NewLine + order.TotalDiscount);
 
-            Console.WriteLine(L.IntroduzcaPais);
-            var countryId = Console.ReadLine();
-            orderService.SetCountry(order, countryId);
+    Console.WriteLine(L.ListadoPaises);
+    Console.WriteLine(orderService.GetCountriesInfo());
 
-            Console.WriteLine(L.ElImpuestoAplicadoEs + Environment.NewLine + order.CalculateTotalTax());
+    Console.WriteLine(L.IntroduzcaPais);
+    var countryId = Console.ReadLine();
+    orderService.SetCountry(order, countryId);
 
-            Console.WriteLine(L.PrecioTotal);
-            var TotalPrice = order.CalculateTotalPrice();
-            Console.WriteLine(TotalPrice);
-        }
+    Console.WriteLine(L.ElImpuestoAplicadoEs + Environment.NewLine + order.CalculateTotalTax());
 
-        private static void GlobalExceptionHandler(object sender, UnhandledExceptionEventArgs e)
-        {
-            Console.WriteLine(L.ErrorInesperado);
-            Console.ReadLine();
-            Environment.Exit(1);
+    Console.WriteLine(L.PrecioTotal);
+    var TotalPrice = order.CalculateTotalPrice();
+    Console.WriteLine(TotalPrice);
+}
 
-        }
-    }
+static void GlobalExceptionHandler(object sender, UnhandledExceptionEventArgs e)
+{
+    Console.WriteLine(L.ErrorInesperado);
+    Console.ReadLine();
+    Environment.Exit(1);
+
 }
 
 
